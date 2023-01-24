@@ -1,6 +1,6 @@
 function E(tag, attrs, ...children) {
     const ele = document.createElement(tag);
-    if (attrs && Object.keys(attrs) > 0) {
+    if (attrs && Object.keys(attrs).length > 0) {
         for (const aName of Object.keys(attrs)) {
             ele.setAttribute(aName, attrs[aName]);
         }

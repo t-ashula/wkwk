@@ -46,7 +46,7 @@ export default async function robots() {
             div.appendChild(E("p", {}, E("a", { href: robotsUrl, target: "_blank" }, T("found."))));
             div.appendChild(E("textarea", {}, T(result.text)));
         } else {
-            div.appendChild(E("p", {}, T(`not found. ${result.status}, ${result.text}`)));
+            div.appendChild(E("p", {}, T(`not found. ${result.status}`)));
         }
     } else {
         div.appendChild(T(`something error :${result.error}`))

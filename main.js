@@ -2,6 +2,7 @@ import "./style.css";
 import { E, T } from "./dom.js";
 import robots from "./robots.js";
 import security from "./security";
+import humans from "./humans.js";
 
 (async function () {
   const app = document.querySelector('#app');
@@ -9,6 +10,7 @@ import security from "./security";
   const results = await Promise.all([
     robots(),
     security(),
+    humans(),
   ]);
   for (const res of results) {
     app.appendChild(res);

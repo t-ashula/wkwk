@@ -21,7 +21,7 @@ function makeRobotsUrl(url) {
  */
 async function fetchRobotsTxt(url) {
     try {
-        const res = await fetch(url, { headers: { 'Accept': 'text/plain' } });
+        const res = await fetch(url, { headers: { 'Accept': 'text/plain' }, redirect: 'error' });
         if (res) {
             const text = await res.text();
             return { status: res.status, text: text };
